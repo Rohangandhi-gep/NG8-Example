@@ -1,2 +1,2 @@
-export class Demopage.Constants {
+export class DemopageConstants {
 }

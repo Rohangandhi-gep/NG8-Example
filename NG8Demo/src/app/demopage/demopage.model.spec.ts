@@ -1,7 +1,7 @@
-import { Demopage.Model } from './demopage.model';
+import { DemopageModel } from './demopage.model';
 
 describe('Demopage.Model', () => {
   it('should create an instance', () => {
-    expect(new Demopage.Model()).toBeTruthy();
+    expect(new DemopageModel()).toBeTruthy();
   });
 });

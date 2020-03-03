@@ -1,2 +1,2 @@
-export class Demopage.Model {
+export class DemopageModel {
 }

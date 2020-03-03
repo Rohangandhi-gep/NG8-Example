@@ -1,2 +1,2 @@
-export class Demopage.Container {
+export class DemopageContainer {
 }
