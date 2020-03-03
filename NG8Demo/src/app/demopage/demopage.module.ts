@@ -10,6 +10,7 @@ import { DemopageComponent } from './component/demopage.component';
   imports: [
     CommonModule,
     DemopageRoutingModule
-  ]
+  ],
+  exports:[DemopageComponent]
 })
 export class DemopageModule { }

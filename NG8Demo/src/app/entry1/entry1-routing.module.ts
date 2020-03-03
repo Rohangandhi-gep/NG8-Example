@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DemopageComponent } from '../demopage/component/demopage.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'demopage',
+    component: DemopageComponent
+  },
+];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class Entry1RoutingModule { }
+export const DemopageControlRoutes = routes;
+//export class Entry1RoutingModule { }
