@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {Entry1Component} from './entry1/component/entry1.component'
-import { DemopageControlRoutes } from './entry1/entry1-routing.module';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Ng8Demo', pathMatch: 'full' },
-  { path: 'Ng8Demo', component: Entry1Component, children:[...DemopageControlRoutes]}
-];
+  {path: '',redirectTo:'demopage', pathMatch:'full'},
+  {
+    path: 'entry1',
+    loadChildren: () => import('./entry1/entry1.module').then(m => m.Entry1Module)
+  },
+  { path: 'demopage', loadChildren: () => import('./demopage/demopage.module').then(m => m.DemopageModule) },
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

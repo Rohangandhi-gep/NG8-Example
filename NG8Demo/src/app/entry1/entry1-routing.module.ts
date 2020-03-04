@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DemopageComponent } from '../demopage/component/demopage.component';
+import { Entry1Component } from './component/entry1.component';
 
 
 const routes: Routes = [
-  {
-    path: 'demopage',
-    component: DemopageComponent
-  },
+ {path: '', component: Entry1Component}
+ 
 ];
 
-export const DemopageControlRoutes = routes;
-//export class Entry1RoutingModule { }
+
+export class Entry1RoutingModule { }
