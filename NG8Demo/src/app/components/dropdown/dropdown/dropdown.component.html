@@ -1,1 +1,9 @@
 <p>dropdown works!</p>
+<select id="ddlselections" name="selectionType" (change)="onSelect($event.target.value)">
+    <option value="none" selected hidden>
+        Select Type
+    </option>
+    <option value="1">DummyVal1</option>
+    <option value="2">DummyVal3</option>
+    <option value="3">DummyVal3</option>
+</select>

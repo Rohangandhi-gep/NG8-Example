@@ -1,1 +1,26 @@
-<p>page works!</p>
+<div  style="padding-left:1em; padding-top: 5em;">
+<select id="selections" name="selectionType" (change)="onSelectionTypeSelect($event.target.value)">
+    <option value="none" selected hidden>
+        Select Type
+    </option>
+    <option *ngFor="let selectType of selectionType" [value]="selectType.SelectionTypeName" [selected]="selectType.IsActive">
+        {{selectType.SelectionTypeName}}
+    </option>
+</select>
+
+<ng-container #selectTypeContainerRef>
+    <ng-template #selectTypeRef></ng-template>
+</ng-container>
+<ng-template #textBox>
+    <app-textbox></app-textbox>
+</ng-template>
+<ng-template #checkBox>
+    <app-checkbox></app-checkbox>
+</ng-template>
+<ng-template #dropDown>
+    <app-dropdown></app-dropdown>
+</ng-template>
+<ng-template #table>
+    <app-table></app-table>
+</ng-template>
+</div>

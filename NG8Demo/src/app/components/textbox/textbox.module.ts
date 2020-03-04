@@ -10,6 +10,7 @@ import { TextboxComponent } from './textbox/textbox.component';
   imports: [
     CommonModule,
     TextboxRoutingModule
-  ]
+  ],
+  exports:[TextboxComponent]
 })
 export class TextboxModule { }

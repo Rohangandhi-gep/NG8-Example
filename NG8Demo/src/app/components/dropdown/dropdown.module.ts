@@ -10,6 +10,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
   imports: [
     CommonModule,
     DropdownRoutingModule
-  ]
+  ],
+  exports:[DropdownComponent]
 })
 export class DropdownModule { }

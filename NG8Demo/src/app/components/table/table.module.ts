@@ -10,6 +10,7 @@ import { TableComponent } from './table/table.component';
   imports: [
     CommonModule,
     TableRoutingModule
-  ]
+  ],
+  exports:[TableComponent]
 })
 export class TableModule { }
