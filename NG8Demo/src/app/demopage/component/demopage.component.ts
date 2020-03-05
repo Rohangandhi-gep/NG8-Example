@@ -10,6 +10,7 @@ import {
 import { TextboxComponent } from 'src/app/components/textbox/component/textbox.component';
 import { DemoPageDirective } from '../demopage.directive';
 import { TableComponent } from 'src/app/components/table/component/table.component';
+import { DropdownComponent } from 'src/app/components/dropdown/component/dropdown.component';
 
 @Component({
   selector: 'app-demopage',
@@ -17,12 +18,11 @@ import { TableComponent } from 'src/app/components/table/component/table.compone
   styleUrls: ['./demopage.component.css']
 })
 export class DemopageComponent implements OnInit {
-
-
   componentRef: any;
   componentFactory: any;
   viewContainerRef:any;
   @ViewChild(DemoPageDirective, {static: true}) demoPageDirective: DemoPageDirective;
+
 
   constructor(private resolver: ComponentFactoryResolver) { }
 
@@ -35,6 +35,10 @@ export class DemopageComponent implements OnInit {
     else if(componentName==="Table")
     {
       this.componentFactory = this.resolver.resolveComponentFactory(TableComponent);
+    }
+    else if(componentName==="Dropdown")
+    {
+      this.componentFactory = this.resolver.resolveComponentFactory(DropdownComponent);
     }
 
     this.viewContainerRef = this.demoPageDirective.viewContainerRef;
