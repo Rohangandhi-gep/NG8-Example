@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page1',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1Component implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
   }
+
+  navigateTo(value) {
+    var _url = "/" + value;
+    if (value) {
+      this.router.navigate([value], { relativeTo: this.activatedRoute });
+    }
+    return false;
+}
 
 }

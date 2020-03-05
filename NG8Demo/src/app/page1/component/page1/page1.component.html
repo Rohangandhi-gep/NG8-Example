@@ -1,1 +1,12 @@
-<p>page1 works!</p>
+<div>
+    <select (change)="navigateTo($event.target.value)">
+        <option value="0">select</option>
+        <option value="textbox">textbox</option>
+        <option value="checkbox">checkbox</option>
+        <option value="table">table</option>
+        <option value="dropdown">dropdown</option>
+    </select>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
