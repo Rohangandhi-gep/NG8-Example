@@ -1,1 +1,12 @@
+<div>
 <p>demopage works!</p>
+<select id="ddlselections" name="selectionType" (change)="createDynamicComponent($event.target.value)">
+    <option value="none" selected hidden>
+        Select Type
+    </option>
+    <option value="TextBox">TextBox</option>
+    <option value="Table">Table</option>
+    <option value="Dropdown">Dropdown</option>
+</select>
+<ng-template plugin-components></ng-template>
+</div>
